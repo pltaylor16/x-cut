@@ -35,6 +35,7 @@ def execute(block, config):
 
 
         #make the BNT transformation 
+        cl_data = np.zeros((nbins, nbins, ell_shape))
         for l in range(ell_shape):
             cl_data_new[:,:,l] = np.dot(np.dot(BNT_matrix, cl_data[:,:,l]), BNT_matrix.T)
 
